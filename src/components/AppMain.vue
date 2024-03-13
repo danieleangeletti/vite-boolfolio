@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import AppProjectCard from "./AppProjectCard.vue";
 
 export default {
   data() {
@@ -12,6 +13,7 @@ export default {
   created() {
     this.getProjects(this.currentPage);
   },
+  components: { AppProjectCard },
   methods: {
     getProjects(page) {
       axios
@@ -47,39 +49,12 @@ export default {
       <h1 class="text-center">ALL PROJECTS</h1>
       <h3>Current page: {{ currentPage }} - Last page: {{ lastPage }}</h3>
       <div class="row justify-content-center">
-        <div
-          v-for="project in projects"
-          :key="project.id"
+        <AppProjectCard
+          v-for="(project, i) in projects"
+          :key="i"
+          :product="project"
           class="card m-3 col-3"
-        >
-          <div class="card-body">
-            <h5 class="card-title">{{ project.id }}) {{ project.title }}</h5>
-            <p class="card-text">
-              {{ project.content }}
-            </p>
-            <div v-if="project.cover_img != null">
-              <img
-                :src="'http://127.0.0.1:8000/storage/' + project.cover_img"
-                :alt="project.title"
-                class="card-img-top"
-              />
-            </div>
-            <hr />
-            <p>Type:</p>
-            <p class="card-text">{{ project.type.title }}</p>
-            <hr />
-            <p>Technologies:</p>
-            <ul>
-              <li
-                v-for="technology in project.technologies"
-                :key="technology.id"
-              >
-                {{ technology.title }}
-              </li>
-            </ul>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-          </div>
-        </div>
+        />
         <div class="d-flex justify-content-between">
           <button @click="previousPage()" type="button" class="btn btn-warning">
             PREVIOUS PAGE
