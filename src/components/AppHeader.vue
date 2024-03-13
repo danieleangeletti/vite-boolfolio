@@ -8,7 +8,9 @@ export default {
 </script>
 
 <template>
-  <header>HEADER</header>
+  <header>
+    <div class="container">HEADER</div>
+  </header>
 </template>
 
 <style lang="scss" scoped></style>
