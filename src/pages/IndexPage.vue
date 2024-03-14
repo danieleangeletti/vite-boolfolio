@@ -1,10 +1,11 @@
 <script>
 import axios from "axios";
-import { RouterView } from "vue-router";
 
 export default {
   data() {
-    return {};
+    return {
+      mainTitle: "This is the index page!",
+    };
   },
 };
 </script>
@@ -12,7 +13,7 @@ export default {
 <template>
   <main>
     <div class="container">
-      <RouterView></RouterView>
+      <h1 class="text-center">{{ mainTitle }}</h1>
     </div>
   </main>
 </template>
