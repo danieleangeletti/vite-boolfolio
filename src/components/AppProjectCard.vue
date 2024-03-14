@@ -1,4 +1,6 @@
 <script>
+import { RouterLink } from "vue-router";
+
 export default {
   data() {
     return {};
@@ -33,6 +35,11 @@ export default {
           {{ technology.title }}
         </li>
       </ul>
+      <RouterLink
+        :to="{ name: 'projects.show', params: { slug: product.slug } }"
+        class="text-decoration-none text-white p-2 bg-primary rounded-pill"
+        >SHOW PROJECT</RouterLink
+      >
     </div>
   </div>
 </template>

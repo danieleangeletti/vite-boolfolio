@@ -4,7 +4,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      mainTitle: "This is the index page!",
+      mainTitle: "HI GUYS!",
     };
   },
 };
@@ -18,4 +18,8 @@ export default {
   </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h1 {
+  margin: 100px 0;
+}
+</style>

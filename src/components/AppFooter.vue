@@ -8,7 +8,19 @@ export default {
 </script>
 
 <template>
-  <footer></footer>
+  <footer class="bg-black bg-opacity-25">
+    <div class="container">
+      <div
+        class="footer-container d-flex justify-content-center align-items-center"
+      >
+        <h1>FOOTER</h1>
+      </div>
+    </div>
+  </footer>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.footer-container {
+  height: 10vh;
+}
+</style>
