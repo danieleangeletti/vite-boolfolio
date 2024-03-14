@@ -12,13 +12,13 @@ export default {
 <template>
   <div>
     <div class="card-body">
-      <h5 class="card-title">{{ product.id }}) {{ product.title }}</h5>
+      <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">
         {{ product.content }}
       </p>
-      <div v-if="product.cover_img != null">
+      <div v-if="product.full_cover_img != null">
         <img
-          :src="'http://127.0.0.1:8000/storage/' + product.cover_img"
+          :src="product.full_cover_img"
           :alt="product.title"
           class="card-img-top"
         />
@@ -33,7 +33,6 @@ export default {
           {{ technology.title }}
         </li>
       </ul>
-      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
     </div>
   </div>
 </template>

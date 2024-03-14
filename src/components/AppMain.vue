@@ -23,6 +23,7 @@ export default {
           },
         })
         .then((res) => {
+          console.log(res.data.results.data);
           this.projects = res.data.results.data;
 
           this.currentPage = res.data.results.current_page;
