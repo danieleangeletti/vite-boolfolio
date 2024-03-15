@@ -27,12 +27,9 @@ export default {
 <template>
   <main>
     <div class="container">
-      <h1 class="text-center">ALL PROJECTS</h1>
+      <h1 v-if="project != null" class="text-center">{{ project.title }}</h1>
       <div class="row justify-content-center">
-        <!-- <AppProjectCard
-          :product="project"
-          class="card m-3 col-3"
-        /> -->
+        <AppProjectCard :product="project" class="card m-3 col-3" />
       </div>
     </div>
   </main>

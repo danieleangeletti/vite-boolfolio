@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div v-if="product != null">
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <p class="card-text">
