@@ -22,6 +22,9 @@ export default {
         })
         .then((res) => {
           console.log(res.data);
+        })
+        .catch((err) => {
+          alert("ERROR: invalid data");
         });
     },
   },
