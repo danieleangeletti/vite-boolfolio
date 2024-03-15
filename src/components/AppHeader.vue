@@ -30,6 +30,14 @@ export default {
               PROJECTS
             </RouterLink>
           </li>
+          <li class="d-inline-block p-2 bg-primary ms-1 me-1 rounded-pill">
+            <RouterLink
+              :to="{ name: 'contact' }"
+              class="text-decoration-none text-white p-2"
+            >
+              CONTACT
+            </RouterLink>
+          </li>
         </ul>
       </div>
     </div>

@@ -17,7 +17,11 @@ export default {
       axios
         .get("http://127.0.0.1:8000/api/projects/" + this.$route.params.slug)
         .then((res) => {
-          this.project = res.data.results;
+          if (res.data.success) {
+            this.project = res.data.results;
+          } else {
+            this.$router.push({ name: "not-found" });
+          }
         });
     },
   },

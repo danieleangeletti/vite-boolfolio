@@ -55,7 +55,7 @@ export default {
           :product="project"
           class="card m-3 col-3"
         />
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between mb-3">
           <button @click="previousPage()" type="button" class="btn btn-warning">
             PREVIOUS PAGE
           </button>

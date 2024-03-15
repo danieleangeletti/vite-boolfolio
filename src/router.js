@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from "vue-router";
 import IndexPageVue from "./pages/IndexPage.vue";
 import PostsPageVue from "./pages/PostsPage.vue";
 import SinglePostPageVue from "./pages/SinglePostPage.vue";
+import NotFoundPageVue from "./pages/NotFoundPage.vue";
+import ContactPageVue from "./pages/ContactPage.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -20,6 +22,16 @@ const router = createRouter({
       path: "/blog/:slug",
       name: "projects.show",
       component: SinglePostPageVue,
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      component: ContactPageVue,
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "not-found",
+      component: NotFoundPageVue,
     },
   ],
 });
